@@ -57,3 +57,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Other
+celerybeat-schedule.bak
+celerybeat-schedule.dat
+celerybeat-schedule.dir
+
