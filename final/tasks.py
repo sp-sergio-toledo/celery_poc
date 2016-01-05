@@ -4,7 +4,7 @@ import redis
 
 
 @app.task(name='etl')
-def extract(x, y):
+def etl():
     etl_workflow = (extract.s() | transform.s() | load.s())
     etl_workflow.apply_async()
 
