@@ -1,17 +1,16 @@
-from __future__ import absolute_import
+from celery_poc.celery_app import app
 
-from celery_poc.celery import app
 
 @app.task(name='add')
-def extract(x, y):
+def add(x, y):
     return x + y
 
 
 @app.task(name='mult')
-def transform(x, y):
+def mult(x, y):
     return x * y
 
 
 @app.task(name='sum')
-def load(numbers):
+def sum(numbers):
     return sum(numbers)
