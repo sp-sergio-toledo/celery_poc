@@ -1,5 +1,14 @@
 redis:
   image: redis:2.8
+  ports:
+    - "6379:6379"
+
+flower:
+  build: ./flower/
+  links:
+    - redis
+  ports:
+    - "5555:5555"
 
 app:
   build: .
