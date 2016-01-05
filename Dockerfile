@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 
 # Define default command.
 USER user
-CMD ["celery", "-A", "celery_poc", "worker", "-B", "--loglevel=info"]
+CMD ["celery", "-A", "celery_poc.celery_app:app", "worker", "-B", "--loglevel=info"]
